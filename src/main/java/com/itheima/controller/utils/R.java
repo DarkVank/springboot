@@ -6,6 +6,7 @@ import lombok.Data;
 public class R {
     private Boolean flag;
     private Object data;
+    private String msg;
 
     public R(){}
     public R(Boolean flag){
@@ -14,5 +15,10 @@ public class R {
     public R(Boolean flag,Object data){
         this.flag = flag;
         this.data = data;
+    }
+//异常消息封装
+    public R(String msg){
+        this.flag = false;
+        this.msg = msg;
     }
 }
